@@ -78,7 +78,7 @@ async def get_report(running_id: str):
         report_id = report['@id']
         # 1. 获取report文件内容
         content = pygvm.get_report(report_id=report_id, report_format_name='PDF', 
-                       filter_str='apply_overrides=0 levels=hml rows=1000 min_qod=30 first=1 sort-reverse=severity')
+                       filter_str='apply_overrides=0 levels=hml rows=1000 min_qod=50 first=1 sort-reverse=severity')
         return {'ok': True, 'content': content}
     except Exception as e:
         logger.error('Faild to get gvm report: ' + str(e))
