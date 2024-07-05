@@ -24,6 +24,6 @@ fi
 # 启动zap
 ZAP_PROCESS_COUNT=$(pgrep -c -f "zap")
 if [ $ZAP_PROCESS_COUNT -eq 0 ]; then
-	zap.sh -port 8081 -host 127.0.0.1 -config network.localServers.mainProxy.behindNat=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.key=zap.cnic.cn 
+	zaproxy -port 8081 -host 127.0.0.1 -config network.localServers.mainProxy.behindNat=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.key=zap.cnic.cn 
 fi
 
