@@ -1,5 +1,6 @@
 import sqlite3
 import time
+import os
 
 data_path = '/home/gunicorn/data.db'
 
@@ -17,6 +18,9 @@ def create_db():
     except:
         return False
     return True
+
+if not os.path.exists(data_path):
+    create_db()
 
 def get_data():
     try:
