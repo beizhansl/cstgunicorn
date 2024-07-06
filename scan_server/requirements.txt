@@ -1,5 +1,5 @@
 fastapi
 pydantic_settings
-python-gvm==23.10.0
-zaproxy==0.2.0
+python-gvm
+zaproxy
 gunicorn
